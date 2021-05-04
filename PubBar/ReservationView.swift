@@ -9,12 +9,28 @@ import UIKit
 
 class ReservationView: UIViewController {
 
+    @IBOutlet weak var firstRoomView: UIView!
+    @IBOutlet weak var secondRoomView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        firstRoomView.isHidden = false
+        secondRoomView.isHidden = true
+       // let firstViewRoomlet = firstRoomView
+        //firstViewRoomlet?.isHidden = true
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func didChangeSegment(_ sender: UISegmentedControl){
+        if sender.selectedSegmentIndex == 0 {
+            firstRoomView.isHidden = false
+            secondRoomView.isHidden = true
+        } else if sender.selectedSegmentIndex == 1 {
+            firstRoomView.isHidden = true
+            secondRoomView.isHidden = false
+        }
+    }
 
     /*
     // MARK: - Navigation
