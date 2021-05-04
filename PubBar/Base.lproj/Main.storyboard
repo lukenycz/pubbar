@@ -46,9 +46,12 @@
                                         <rect key="frame" x="8" y="188" width="327" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92371088270000001" green="0.076073817909999994" blue="0.31762310859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Wejdź jako gość">
+                                        <state key="normal" title="Zarezerwuj jako gość">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="guestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cIu-g1-WM2"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wpisz hasło:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UJ-OH-9qS">
                                         <rect key="frame" x="8" y="79" width="104" height="21"/>
@@ -82,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="123.68815592203899"/>
         </scene>
-        <!--View Controller-->
+        <!--Reservation View-->
         <scene sceneID="QRi-5R-xG9">
             <objects>
-                <viewController id="rhz-zc-luB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReservationView" id="rhz-zc-luB" customClass="ReservationView" customModule="PubBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4TX-FP-ZTc" customClass="res">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M8A-cu-Xfe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1097" y="300"/>
+            <point key="canvasLocation" x="1033" y="401"/>
         </scene>
     </scenes>
     <resources>
