@@ -10,14 +10,13 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func guestButton(_ sender: Any) {
-       
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let reservationViewController = storyboard.instantiateViewController(identifier: "ReservationView") as! ReservationView
-        self.present(reservationViewController, animated: true, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "RestaurantView", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RestaurantView") as! RestaurantView
+        self.present(vc, animated: true, completion: nil)
         /*
-       let vcReservation = storyboard?.instantiateViewController(withIdentifier: "ReservationView") as! ReservationView
-        navigationController?.present(vcReservation, animated: true, completion: nil)
-        print("przesżło")
+       let vcRestaurant = storyboard?.instantiateViewController(withIdentifier: "RestaurantView") as! RestaurantView
+        navigationController?.present(vcRestaurant, animated: true, completion: nil)
          */
     }
     override func viewDidLoad() {
