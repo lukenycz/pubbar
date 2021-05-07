@@ -102,7 +102,6 @@
                                 </state>
                                 <connections>
                                     <action selector="backToRestaurantButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="7r3-9o-bie"/>
-                                    <action selector="reserveButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="vbW-JN-3dB"/>
                                 </connections>
                             </button>
                         </subviews>

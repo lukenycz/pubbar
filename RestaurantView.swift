@@ -15,12 +15,12 @@ class RestaurantView: UIViewController {
     @IBOutlet weak var firstRoomView: UIView!
     @IBOutlet weak var secondRoomView: UIView!
     
-    @IBAction func tableFor2(_ sender: UIb) {
+    @IBAction func tableFor2(_ sender: UIButton) {
         
+    sender.backgroundColor = UIColor.green
+        secondRoomView.backgroundColor = UIColor.red
         
         goToReserveForm()
-        
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,8 @@ class RestaurantView: UIViewController {
     }
     
     struct buttonStatus {
+        
+
         var freeGreen = PubBarLogic.reservationStatus.freeTable
         var reservedGray = PubBarLogic.reservationStatus.reservedTable
         var takenTable = PubBarLogic.reservationStatus.takenTable

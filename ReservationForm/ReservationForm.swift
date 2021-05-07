@@ -17,11 +17,16 @@ class ReservationForm: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func reserveButton(_ sender: UIButton) {
-        var tableForTwo = restaurantView?.tableFor2.self
+    @IBAction func reserveButton(_ sender: Any) {
         
-        sender.backgroundColor.
+    
+        
+        restaurantView?.secondRoomView.backgroundColor = UIColor.purple
+        restaurantView?.firstRoomView.backgroundColor = UIColor.blue
+
     }
+    
+    
     @IBAction func backToRestaurantButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
