@@ -17,7 +17,7 @@ class ReservationForm: UIViewController {
     var restaurantView:RestaurantView?
     
     weak var ReservationFormDelegate:ReservationFormDelegate?
-    private let button = UIButton()
+    
     
 //    @objc private func didTapButton(_ sender: UIButton){
 //    ReservationFormDelegate?.didTapButton()
@@ -26,11 +26,13 @@ class ReservationForm: UIViewController {
        // somewhere in the configuration and layout of button and other views
     override func viewDidLoad() {
         super.viewDidLoad()
-        button.addTarget(self, action: #selector(reserveButton), for: .touchUpInside)
+      //  button.addTarget(self, action: #selector(reserveButton), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
     
     @IBAction func reserveButton(_ sender: Any) {
+        let button = UIButton()
+        button.addTarget(self, action: #selector(reserveButton), for: .touchUpInside)
         ReservationFormDelegate?.didTapButton()
     }
     
