@@ -62,6 +62,7 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <connections>
+                        <outlet property="TableFor2Outlet" destination="hBV-hC-d4w" id="XZ6-Rq-Kx9"/>
                         <outlet property="firstRoomView" destination="WSi-bn-27e" id="1by-QG-29s"/>
                         <outlet property="secondRoomView" destination="X5H-ka-dmI" id="UCn-yk-1Uq"/>
                     </connections>

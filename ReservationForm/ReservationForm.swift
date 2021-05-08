@@ -7,10 +7,33 @@
 
 import UIKit
 
+protocol ReservationFormDelegate:AnyObject {
+    func didTapButton()
+    
+}
+
 class ReservationForm: UIViewController {
 
     var restaurantView:RestaurantView?
     
+    weak var ReservationFormDelegate:ReservationFormDelegate?
+//    private let button = UIButton()
+//    button.addTarget(self, action: #selector(didTapButton), for : .touchUpInside)
+    
+    
+//    @objc private func didTapButton(_ sender: UIButton){
+//    ReservationFormDelegate?.didTapButton()
+    
+    weak var delegate: ReservationFormDelegate?
+       private let button = UIButton()
+
+       // somewhere in the configuration and layout of button and other views
+    func buttonTapped() {
+        button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+    }
+       @objc func didTapButton(_ sender: UIButton) {
+           delegate?.didTapButton()
+       }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,19 +41,23 @@ class ReservationForm: UIViewController {
     }
     
     @IBAction func reserveButton(_ sender: Any) {
-        
-    
-        
-        restaurantView?.secondRoomView.backgroundColor = UIColor.purple
-        restaurantView?.firstRoomView.backgroundColor = UIColor.blue
-
+        changeTableColor()
+        buttonTapped()
     }
     
+   
     
     @IBAction func backToRestaurantButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
+    
+    func changeTableColor() {
+        
+        restaurantView?.TableFor2Outlet.backgroundColor = UIColor.purple
+        restaurantView?.secondRoomView.backgroundColor = UIColor.purple
+        restaurantView?.firstRoomView.backgroundColor = UIColor.blue
+    }
     /*
     // MARK: - Navigation
 
