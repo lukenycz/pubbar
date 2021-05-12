@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSi-bn-27e">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSi-bn-27e">
                                 <rect key="frame" x="30" y="30" width="315" height="530"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -28,19 +28,30 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5H-ka-dmI">
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5H-ka-dmI">
                                 <rect key="frame" x="30" y="30" width="315" height="530"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hC-d4w">
-                                        <rect key="frame" x="136" y="268" width="102" height="48"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hC-d4w">
+                                        <rect key="frame" x="136" y="268" width="171" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92371088270000001" green="0.076073817909999994" blue="0.31762310859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Xbox for 2">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="tableFor2:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="258-Zz-xGk"/>
+                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="Wme-gz-Yw5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGA-Tk-8qC">
+                                        <rect key="frame" x="136" y="335" width="171" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Xbox for 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="dGP-q7-eDz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -62,14 +73,14 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <connections>
-                        <outlet property="TableFor2Outlet" destination="hBV-hC-d4w" id="XZ6-Rq-Kx9"/>
-                        <outlet property="firstRoomView" destination="WSi-bn-27e" id="1by-QG-29s"/>
-                        <outlet property="secondRoomView" destination="X5H-ka-dmI" id="UCn-yk-1Uq"/>
+                        <outlet property="firstRoomView" destination="WSi-bn-27e" id="TEN-jj-Ky1"/>
+                        <outlet property="secondRoomView" destination="X5H-ka-dmI" id="J3P-z9-Gcp"/>
+                        <outlet property="tableReservation" destination="ZGA-Tk-8qC" id="T5z-Mb-9jN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvg-ix-Wwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="54.422788605697157"/>
+            <point key="canvasLocation" x="-18.399999999999999" y="53.523238380809602"/>
         </scene>
     </scenes>
     <resources>

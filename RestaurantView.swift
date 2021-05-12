@@ -7,66 +7,77 @@
 
 import UIKit
 
+struct TableModel {
+    let id: Int
+    let title: String
+}
+
+enum RoomModel {
+    case first, second
+    
+    var tables: [TableModel] {
+        switch self {
+        case .first:
+            return (0...10).map { TableModel(id: $0, title: "First\($0)") }
+        case .second:
+            return (0...10).map { TableModel(id: $0, title: "Second \($0)") }
+        }
+    }
+}
+
+
 var restaurantView:RestaurantView?
 
 var pubBarLogic:PubBarLogic?
 
-class RestaurantView: UIViewController, ReservationFormDelegate {
-    func didTapButton() {
-        print("asdasdasdasd")
-    }
+class RestaurantView: UIViewController {
+    var reservationFormDelegate: ReservationFormDelegate?
     
-    
-    @IBOutlet weak var TableFor2Outlet: UIButton!
-    
+    @IBOutlet weak var tableReservation: UIButton!
     @IBOutlet weak var firstRoomView: UIView!
     @IBOutlet weak var secondRoomView: UIView!
     
-    @IBAction func tableFor2(_ sender: UIButton) {
+    @IBAction func tableTapped(_ sender: UIButton) {
+        if sender.tag == 1 {
+            goToReserveForm()
+        } else if sender.tag == 2 {
+            goToReserveForm()
+        }
         
-    //sender.backgroundColor = UIColor.green
-      //  secondRoomView.backgroundColor = UIColor.red
-        
-        goToReserveForm()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableReservation.backgroundColor = .green
+
         firstRoomView.isHidden = false
         secondRoomView.isHidden = true
         
     }
-    
-   
-   
 
     @IBAction func didChangeSegment(_ sender: UISegmentedControl){
         if sender.selectedSegmentIndex == 0 {
             firstRoomView.isHidden = false
             secondRoomView.isHidden = true
+            
+            
         } else if sender.selectedSegmentIndex == 1 {
             firstRoomView.isHidden = true
             secondRoomView.isHidden = false
         }
-    }
-    
-    struct buttonStatus {
         
+    }
 
-        var freeGreen = PubBarLogic.reservationStatus.freeTable
-        var reservedGray = PubBarLogic.reservationStatus.reservedTable
-        var takenTable = PubBarLogic.reservationStatus.takenTable
-        
-    }
-    
     func goToReserveForm() {
         let storyboard = UIStoryboard(name: "ReservationForm", bundle: nil)
         let reservationVC = storyboard.instantiateViewController(withIdentifier: "ReservationForm") as! ReservationForm
+        reservationVC.reservationFormDelegate = self
         self.present(reservationVC, animated: true, completion: nil)
     }
+}
 
-    private lazy var detailView: ReservationForm = {
-        let detailView = ReservationForm()
-        detailView.ReservationFormDelegate = self
-        return detailView
-    }()
+extension RestaurantView: ReservationFormDelegate {
+    func didTapButton(label: String, color: UIColor) {
+        tableReservation.setTitle(label, for: .normal)
+        tableReservation.backgroundColor = color
+    }
 }
