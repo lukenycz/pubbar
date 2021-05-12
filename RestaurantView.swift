@@ -33,22 +33,47 @@ var pubBarLogic:PubBarLogic?
 class RestaurantView: UIViewController {
     var reservationFormDelegate: ReservationFormDelegate?
     
-    @IBOutlet weak var tableReservation: UIButton!
+
+
+    @IBOutlet weak var tableReservation1: UIButton!
+    @IBOutlet weak var tableReservation2: UIButton!
+    @IBOutlet weak var tableReservation3: UIButton!
     @IBOutlet weak var firstRoomView: UIView!
     @IBOutlet weak var secondRoomView: UIView!
     
+    
     @IBAction func tableTapped(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case 1:
+            goToReserveForm()
+        case 2:
+            goToReserveForm()
+        case 3:
+            goToReserveForm()
+        default:
+            goToReserveForm()
+        }
+        /*
+        
+        switch sender {
+        case tableReservation:
+            print("123")
+        case tableReservation2:
+            print("444444")
+        default:
+            goToReserveForm()
+        }
+    
         if sender.tag == 1 {
             goToReserveForm()
         } else if sender.tag == 2 {
             goToReserveForm()
         }
-        
+        */
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableReservation.backgroundColor = .green
-
         firstRoomView.isHidden = false
         secondRoomView.isHidden = true
         
@@ -77,7 +102,7 @@ class RestaurantView: UIViewController {
 
 extension RestaurantView: ReservationFormDelegate {
     func didTapButton(label: String, color: UIColor) {
-        tableReservation.setTitle(label, for: .normal)
-        tableReservation.backgroundColor = color
+       // tableReservation.setTitle(label, for: .normal)
+        //tableReservation.backgroundColor = color
     }
 }
