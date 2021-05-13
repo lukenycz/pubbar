@@ -11,8 +11,8 @@ class ViewController: UIViewController {
 
     @IBAction func guestButton(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "RestaurantView", bundle: nil)
-        let restaurantVC = storyboard.instantiateViewController(withIdentifier: "RestaurantView") as! RestaurantView
+        let storyboard = UIStoryboard(name: "RestaurantCollectionVC", bundle: nil)
+        let restaurantVC = storyboard.instantiateViewController(withIdentifier: "RestaurantCollectionVC") as! RestaurantCollectionVC
         restaurantVC.modalPresentationStyle = .overFullScreen
         self.present(restaurantVC, animated: true, completion: nil)
         /*

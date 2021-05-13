@@ -12,6 +12,9 @@
 		105D8DAC26441C3B008ADF3B /* PubBarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D8DAB26441C3B008ADF3B /* PubBarLogic.swift */; };
 		105D8DB126445D38008ADF3B /* ReservationForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105D8DB026445D38008ADF3B /* ReservationForm.storyboard */; };
 		105D8DB426445D5D008ADF3B /* ReservationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D8DB326445D5D008ADF3B /* ReservationForm.swift */; };
+		10947D87264D4D630029D781 /* RestaurantCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10947D86264D4D630029D781 /* RestaurantCollectionVC.swift */; };
+		10947D8B264D4D7B0029D781 /* RestaurantCollectionVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10947D8A264D4D7B0029D781 /* RestaurantCollectionVC.storyboard */; };
+		10947D8E264D4FA90029D781 /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10947D8D264D4FA90029D781 /* RestaurantCollectionViewCell.swift */; };
 		10A93DBB26413F4C00FF970B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A93DBA26413F4C00FF970B /* AppDelegate.swift */; };
 		10A93DBD26413F4C00FF970B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A93DBC26413F4C00FF970B /* SceneDelegate.swift */; };
 		10A93DBF26413F4C00FF970B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A93DBE26413F4C00FF970B /* ViewController.swift */; };
@@ -26,6 +29,9 @@
 		105D8DAB26441C3B008ADF3B /* PubBarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubBarLogic.swift; sourceTree = "<group>"; };
 		105D8DB026445D38008ADF3B /* ReservationForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReservationForm.storyboard; sourceTree = "<group>"; };
 		105D8DB326445D5D008ADF3B /* ReservationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationForm.swift; sourceTree = "<group>"; };
+		10947D86264D4D630029D781 /* RestaurantCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionVC.swift; sourceTree = "<group>"; };
+		10947D8A264D4D7B0029D781 /* RestaurantCollectionVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantCollectionVC.storyboard; sourceTree = "<group>"; };
+		10947D8D264D4FA90029D781 /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
 		10A93DB726413F4C00FF970B /* PubBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PubBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A93DBA26413F4C00FF970B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A93DBC26413F4C00FF970B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +58,9 @@
 			children = (
 				105D8D98264311C5008ADF3B /* RestaurantView.storyboard */,
 				105D8D9B264311ED008ADF3B /* RestaurantView.swift */,
+				10947D86264D4D630029D781 /* RestaurantCollectionVC.swift */,
+				10947D8A264D4D7B0029D781 /* RestaurantCollectionVC.storyboard */,
+				10947D8D264D4FA90029D781 /* RestaurantCollectionViewCell.swift */,
 			);
 			name = RestautrantView;
 			sourceTree = "<group>";
@@ -163,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10947D8B264D4D7B0029D781 /* RestaurantCollectionVC.storyboard in Resources */,
 				10A93DC726413F5000FF970B /* LaunchScreen.storyboard in Resources */,
 				10A93DC426413F5000FF970B /* Assets.xcassets in Resources */,
 				105D8D99264311C5008ADF3B /* RestaurantView.storyboard in Resources */,
@@ -179,10 +189,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				105D8DAC26441C3B008ADF3B /* PubBarLogic.swift in Sources */,
+				10947D8E264D4FA90029D781 /* RestaurantCollectionViewCell.swift in Sources */,
 				10A93DBF26413F4C00FF970B /* ViewController.swift in Sources */,
 				105D8DB426445D5D008ADF3B /* ReservationForm.swift in Sources */,
 				10A93DBB26413F4C00FF970B /* AppDelegate.swift in Sources */,
 				105D8D9C264311ED008ADF3B /* RestaurantView.swift in Sources */,
+				10947D87264D4D630029D781 /* RestaurantCollectionVC.swift in Sources */,
 				10A93DBD26413F4C00FF970B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
