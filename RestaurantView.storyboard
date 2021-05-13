@@ -32,7 +32,7 @@
                                 <rect key="frame" x="30" y="30" width="315" height="530"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hC-d4w">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hC-d4w" userLabel="Table Reservation1">
                                         <rect key="frame" x="136" y="268" width="171" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92371088270000001" green="0.076073817909999994" blue="0.31762310859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -40,10 +40,10 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="Wme-gz-Yw5"/>
+                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="RVD-FM-WC1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGA-Tk-8qC">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGA-Tk-8qC" userLabel="Table Reservation2">
                                         <rect key="frame" x="136" y="335" width="171" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,7 +51,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="dGP-q7-eDz"/>
+                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="YfV-mH-IPT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,7 +75,8 @@
                     <connections>
                         <outlet property="firstRoomView" destination="WSi-bn-27e" id="TEN-jj-Ky1"/>
                         <outlet property="secondRoomView" destination="X5H-ka-dmI" id="J3P-z9-Gcp"/>
-                        <outlet property="tableReservation" destination="ZGA-Tk-8qC" id="T5z-Mb-9jN"/>
+                        <outlet property="tableReservation1" destination="hBV-hC-d4w" id="4Kj-WZ-MaI"/>
+                        <outlet property="tableReservation2" destination="ZGA-Tk-8qC" id="LSv-Mv-9gm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvg-ix-Wwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
