@@ -103,7 +103,7 @@ extension RestaurantView: ReservationFormDelegate {
             tableReservation2.setTitle(label, for: .normal)
             tableReservation2.backgroundColor = color
         default:
-            print("error")
+            print("errrror")
         }
         
         
