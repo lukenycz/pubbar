@@ -8,11 +8,16 @@
 import UIKit
 
 class RestaurantCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var tableNameLabel: UILabel!
     
-    
-    @IBOutlet private weak var tableNameLabel: UILabel!
-    
-    func configure(with tableName: String) {
-        tableNameLabel.text = tableName
+    var model: TableModel? {
+        didSet {
+            tableNameLabel.text = model?.title
+        }
+    }
+    var isReserved: Bool = false {
+        didSet {
+            contentView.backgroundColor = isReserved ? .red : .green
+        }
     }
 }

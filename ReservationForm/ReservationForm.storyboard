@@ -89,7 +89,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="reserveButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="DBq-fY-wmS"/>
+                                    <action selector="reserveButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="7gd-fd-rea"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ss-VP-8yM">
@@ -101,7 +101,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="backToRestaurantButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="7r3-9o-bie"/>
+                                    <action selector="backToRestaurantButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="oar-Zi-hZI"/>
                                 </connections>
                             </button>
                         </subviews>

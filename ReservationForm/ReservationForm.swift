@@ -7,20 +7,21 @@
 
 import UIKit
 
-protocol ReservationFormDelegate:AnyObject {
-
-    func didTapButton(label: String, color: UIColor, sender: Any)
+protocol ReservationFormDelegate {
+    func didTapButton(model: TableModel)
 }
 class ReservationForm: UIViewController {
+    var reservationFormDelegate: ReservationFormDelegate!
+    var model: TableModel?
     
-    var reservationFormDelegate:ReservationFormDelegate!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func reserveButton(_ sender: Any) {
+        guard let model = model else { return }
         dismiss(animated: true, completion: nil)
-        reservationFormDelegate.didTapButton(label:  "Reserved", color: .red, sender: AnyObject.self)
+        reservationFormDelegate.didTapButton(model: model)
     }
     @IBAction func backToRestaurantButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
