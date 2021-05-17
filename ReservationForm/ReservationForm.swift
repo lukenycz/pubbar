@@ -11,7 +11,7 @@ protocol ReservationFormDelegate {
     func didTapButton(model: TableModel)
 }
 
-struct userModel {
+struct UserModel {
     let userName: String
     let userSurname: String
     let userPhone: String
@@ -20,34 +20,25 @@ struct userModel {
 class ReservationForm: UIViewController {
     var reservationFormDelegate: ReservationFormDelegate!
     var model: TableModel?
-    var modelUser:userModel?
+    var modelUser: UserModel? {
+        UserModel(userName: userNameLabel.text!,
+                  userSurname: userSurnameLabel.text!,
+                  userPhone: userPhoneLabel.text!,
+                  userReservation: userDateReservationLabel.date)
+    }
     
     @IBOutlet weak var userNameLabel: UITextField!
     @IBOutlet weak var userSurnameLabel: UITextField!
     @IBOutlet weak var userPhoneLabel: UITextField!
     @IBOutlet weak var userDateReservationLabel: UIDatePicker!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-    }
-    func userInfo(model: userModel) {
-
-        userNameLabel.text = model.userName
-        userSurnameLabel.text = model.userSurname
-        userPhoneLabel.text = model.userPhone
-        userDateReservationLabel.date = model.userReservation
-        
-        let userInformation = userModel(userName: model.userName, userSurname: model.userSurname, userPhone: model.userPhone, userReservation: model.userReservation)
-        print(userInformation)
-    }
     
     @IBAction func reserveButton(_ sender: Any) {
         guard let model = model else { return }
         dismiss(animated: true, completion: nil)
         reservationFormDelegate.didTapButton(model: model)
        
-        userInfo(model: modelUser!)
+        print(modelUser)
     }
     @IBAction func backToRestaurantButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
