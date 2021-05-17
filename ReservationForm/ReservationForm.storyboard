@@ -108,6 +108,12 @@
                         <viewLayoutGuide key="safeArea" id="JxL-7x-ykq"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
+                    <connections>
+                        <outlet property="userDateReservationLabel" destination="CEj-hb-bQx" id="Pod-yZ-bhC"/>
+                        <outlet property="userNameLabel" destination="o8x-U4-JJt" id="7Va-0Y-kUI"/>
+                        <outlet property="userPhoneLabel" destination="Eeb-G7-Udv" id="TfP-ga-pRt"/>
+                        <outlet property="userSurnameLabel" destination="wns-0L-lp2" id="sfR-AW-C6a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asS-xo-AzC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
