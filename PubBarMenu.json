@@ -1,0 +1,98 @@
+{
+            "Drinks": [
+                {
+                    "name": "Heineken",
+                    "price": 4
+                },
+                {
+                    "name": "Carlsberg",
+                    "price": 4
+                },
+                {
+                    "name": "Pina colada",
+                    "description": "White Havana Club + Ice + Coconut Milk + Pineapple Juice",
+                    "price": 8
+                },
+                {
+                    "name": "Cuba Libre",
+                    "description": "Havana Club + Ice + Coca Cola + Lime",
+                    "price": 7
+                },
+                {
+                    "name": "Whiskey + Coke",
+                    "description": "Wild Turkey + Ice + Coca Cola",
+                    "price": 9
+                },
+            ]
+            
+            "Soft Drinks": [
+                {
+                    "name": "Coke",
+                    "price": 2
+                },
+                {
+                    "name": "Orange Juice",
+                    "price": 1
+                },
+                {
+                    "name": "Sprite",
+                    "price": 2
+                },
+                {
+                    "name": "Burn",
+                    "price": 3
+                },
+                {
+                    "name": "Sparkling Water",
+                    "price": 1
+                },
+            ]
+            "Snacks": [
+                {
+                    "name": "Fries",
+                    "description": "with ketchup",
+                    "price": 7
+                },
+                {
+                    "name": "Onion Rings",
+                    "description": "breaded with mayo sauce",
+                    "price": 3
+                },
+                {
+                    "name": "2x French Toast",
+                    "description": "with cheese and bacon",
+                    "price": 4
+                },
+                {
+                    "name": "8 Nuggets",
+                    "price": 4
+                },
+                {
+                    "name": "Greek Salad",
+                    "description": "Lettuce, feta, beets, tomatoes, olives, red onion",
+                    "price": 5
+                },
+            ]
+            "Pizza": [
+                {
+                    "name": "Margherita",
+                    "description": "Tomato sauce, mozzarella, and oregano",
+                    "price": 8
+                },
+                {
+                    "name": "Quatro Stagioni",
+                    "description": "Tomato sauce, mozzarella, mushrooms, ham, artichokes, olives, and oregano ",
+                    "price": 10
+                },
+                {
+                    "name": "Diavola",
+                    "description": "Tomato Sauce, mozzarella, spicy salami, and chilli pepper",
+                    "price": 9
+                },
+                {
+                    "name": "Parmigiana",
+                    "description": "Tomato sauce, mozzarella, eggplants and parmesan flakes",
+                    "price": 9
+                },
+            ]
+}
