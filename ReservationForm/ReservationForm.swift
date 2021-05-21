@@ -10,7 +10,6 @@ import UIKit
 protocol ReservationFormDelegate {
     func didTapButton(model: TableModel)
 }
-
 struct UserModel {
     let userName: String
     let userSurname: String
@@ -38,7 +37,7 @@ class ReservationForm: UIViewController {
         dismiss(animated: true, completion: nil)
         reservationFormDelegate.didTapButton(model: model)
        
-        print(modelUser)
+        print(modelUser!)
     }
     @IBAction func backToRestaurantButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
