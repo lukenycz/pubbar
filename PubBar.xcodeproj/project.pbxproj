@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		100EC9F126590E7900AB51D4 /* PubBarMenu.json in Resources */ = {isa = PBXBuildFile; fileRef = 100EC9F026590E7900AB51D4 /* PubBarMenu.json */; };
 		105D8D99264311C5008ADF3B /* RestaurantView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105D8D98264311C5008ADF3B /* RestaurantView.storyboard */; };
 		105D8D9C264311ED008ADF3B /* RestaurantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D8D9B264311ED008ADF3B /* RestaurantView.swift */; };
 		105D8DAC26441C3B008ADF3B /* PubBarLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D8DAB26441C3B008ADF3B /* PubBarLogic.swift */; };
 		105D8DB126445D38008ADF3B /* ReservationForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 105D8DB026445D38008ADF3B /* ReservationForm.storyboard */; };
 		105D8DB426445D5D008ADF3B /* ReservationForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105D8DB326445D5D008ADF3B /* ReservationForm.swift */; };
-		108DC377265805B500315842 /* PubBarMenu copy.json in Resources */ = {isa = PBXBuildFile; fileRef = 108DC376265805B500315842 /* PubBarMenu copy.json */; };
 		10947D87264D4D630029D781 /* RestaurantCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10947D86264D4D630029D781 /* RestaurantCollectionVC.swift */; };
 		10947D8B264D4D7B0029D781 /* RestaurantCollectionVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10947D8A264D4D7B0029D781 /* RestaurantCollectionVC.storyboard */; };
 		10947D8E264D4FA90029D781 /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10947D8D264D4FA90029D781 /* RestaurantCollectionViewCell.swift */; };
@@ -25,12 +25,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		100EC9F026590E7900AB51D4 /* PubBarMenu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PubBarMenu.json; sourceTree = "<group>"; };
 		105D8D98264311C5008ADF3B /* RestaurantView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantView.storyboard; sourceTree = "<group>"; };
 		105D8D9B264311ED008ADF3B /* RestaurantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantView.swift; sourceTree = "<group>"; };
 		105D8DAB26441C3B008ADF3B /* PubBarLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubBarLogic.swift; sourceTree = "<group>"; };
 		105D8DB026445D38008ADF3B /* ReservationForm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReservationForm.storyboard; sourceTree = "<group>"; };
 		105D8DB326445D5D008ADF3B /* ReservationForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationForm.swift; sourceTree = "<group>"; };
-		108DC376265805B500315842 /* PubBarMenu copy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "PubBarMenu copy.json"; sourceTree = "<group>"; };
 		10947D86264D4D630029D781 /* RestaurantCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionVC.swift; sourceTree = "<group>"; };
 		10947D8A264D4D7B0029D781 /* RestaurantCollectionVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantCollectionVC.storyboard; sourceTree = "<group>"; };
 		10947D8D264D4FA90029D781 /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		108DC375265805A200315842 /* PubBarMenu */ = {
 			isa = PBXGroup;
 			children = (
-				108DC376265805B500315842 /* PubBarMenu copy.json */,
+				100EC9F026590E7900AB51D4 /* PubBarMenu.json */,
 			);
 			name = PubBarMenu;
 			sourceTree = "<group>";
@@ -184,9 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				10947D8B264D4D7B0029D781 /* RestaurantCollectionVC.storyboard in Resources */,
-				108DC377265805B500315842 /* PubBarMenu copy.json in Resources */,
 				10A93DC726413F5000FF970B /* LaunchScreen.storyboard in Resources */,
 				10A93DC426413F5000FF970B /* Assets.xcassets in Resources */,
+				100EC9F126590E7900AB51D4 /* PubBarMenu.json in Resources */,
 				105D8D99264311C5008ADF3B /* RestaurantView.storyboard in Resources */,
 				105D8DB126445D38008ADF3B /* ReservationForm.storyboard in Resources */,
 				10A93DC226413F4C00FF970B /* Main.storyboard in Resources */,
