@@ -1,11 +1,15 @@
 {
-            "Drinks": [
+   "menu": [ {
+        
+        "drinks": [
                 {
                     "name": "Heineken",
+                    "description": " ",
                     "price": 4
                 },
                 {
                     "name": "Carlsberg",
+                    "description": " ",
                     "price": 4
                 },
                 {
@@ -22,32 +26,37 @@
                     "name": "Whiskey + Coke",
                     "description": "Wild Turkey + Ice + Coca Cola",
                     "price": 9
-                },
-            ]
+                }
+            ],
             
-            "Soft Drinks": [
+            "softdrinks": [
                 {
                     "name": "Coke",
+                    "description": " ",
                     "price": 2
                 },
                 {
                     "name": "Orange Juice",
+                    "description": " ",
                     "price": 1
                 },
                 {
                     "name": "Sprite",
+                    "description": " ",
                     "price": 2
                 },
                 {
                     "name": "Burn",
+                    "description": " ",
                     "price": 3
                 },
                 {
                     "name": "Sparkling Water",
+                    "description": " ",
                     "price": 1
-                },
-            ]
-            "Snacks": [
+                }
+            ],
+            "snacks": [
                 {
                     "name": "Fries",
                     "description": "with ketchup",
@@ -65,15 +74,16 @@
                 },
                 {
                     "name": "8 Nuggets",
+                    "description": " ",
                     "price": 4
                 },
                 {
                     "name": "Greek Salad",
                     "description": "Lettuce, feta, beets, tomatoes, olives, red onion",
                     "price": 5
-                },
-            ]
-            "Pizza": [
+                }
+            ],
+            "pizza": [
                 {
                     "name": "Margherita",
                     "description": "Tomato sauce, mozzarella, and oregano",
@@ -93,6 +103,8 @@
                     "name": "Parmigiana",
                     "description": "Tomato sauce, mozzarella, eggplants and parmesan flakes",
                     "price": 9
-                },
+                }
             ]
+        }]
 }
+

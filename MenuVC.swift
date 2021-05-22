@@ -21,14 +21,14 @@ class MenuVC: UIViewController {
         }
         
         let url = URL(fileURLWithPath: path)
-        var result:Result?
+        var menu:Menu?
         
         do {
         let jsonData = try Data(contentsOf: url)
-            result = try JSONDecoder().decode(Result.self, from: jsonData)
+            menu = try JSONDecoder().decode(Menu.self, from: jsonData)
             
-            if let result = result {
-                print(result)
+            if let menu = menu {
+                print(menu)
             } else {
                 print("Failed to pase")
             }
@@ -40,11 +40,11 @@ class MenuVC: UIViewController {
 
 }
 
-struct Result:Codable {
-    let data:[ResultItem]
+struct Menu:Codable {
+    let menu:[ResultItems]?
 }
 
-struct ResultItem:Codable {
+struct ResultItems:Codable {
     let name: String
     let description: String
     let price: Int

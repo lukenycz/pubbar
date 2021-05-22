@@ -39,6 +39,15 @@ class ReservationForm: UIViewController {
        
         print(modelUser!)
     }
+    
+    
+    @IBAction func goToMenuButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MenuVC", bundle: nil)
+        let menuVC = storyboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuVC
+        menuVC.modalPresentationStyle = .overFullScreen
+        self.present(menuVC, animated: true, completion: nil)
+        
+    }
     @IBAction func backToRestaurantButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
