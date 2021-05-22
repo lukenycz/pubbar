@@ -41,10 +41,31 @@ class MenuVC: UIViewController {
 }
 
 struct Menu:Codable {
-    let menu:[ResultItems]?
+    let menu:[MenuContains]?
 }
 
-struct ResultItems:Codable {
+struct MenuContains:Codable {
+    let drinks:[Drinks]
+    let softdrinks:[SoftDrinks]
+    let snacks:[Snacks]
+    let pizza:[Pizza]
+}
+struct Drinks:Codable {
+    let name: String
+    let description: String
+    let price: Int
+}
+struct SoftDrinks:Codable {
+    let name: String
+    let description: String
+    let price: Int
+}
+struct Snacks:Codable {
+    let name: String
+    let description: String
+    let price: Int
+}
+struct Pizza:Codable {
     let name: String
     let description: String
     let price: Int
