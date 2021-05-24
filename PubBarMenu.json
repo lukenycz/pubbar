@@ -1,6 +1,7 @@
 {
-   "menu": [ {
-        
+   "menu": [
+       {
+        "type": "Drinks",
         "drinks": [
                 {
                     "name": "Heineken",
@@ -27,8 +28,10 @@
                     "description": "Wild Turkey + Ice + Coca Cola",
                     "price": 9
                 }
-            ],
-            
+            ]
+        },
+       {
+            "type": "SoftDrinks",
             "softdrinks": [
                 {
                     "name": "Coke",
@@ -55,7 +58,10 @@
                     "description": " ",
                     "price": 1
                 }
-            ],
+            ]
+        },
+       {
+            "type": "Snacks",
             "snacks": [
                 {
                     "name": "Fries",
@@ -82,7 +88,10 @@
                     "description": "Lettuce, feta, beets, tomatoes, olives, red onion",
                     "price": 5
                 }
-            ],
+            ]
+        },
+       {
+            "type": "Pizza",
             "pizza": [
                 {
                     "name": "Margherita",
@@ -105,6 +114,7 @@
                     "price": 9
                 }
             ]
-        }]
+        }
+    ]
 }
 
