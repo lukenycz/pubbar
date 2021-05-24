@@ -33,6 +33,7 @@
                                 <rect key="frame" x="30" y="30" width="315" height="530"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hC-d4w" userLabel="Table Reservation1">
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hC-d4w">
                                         <rect key="frame" x="136" y="268" width="171" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -41,6 +42,18 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="RVD-FM-WC1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGA-Tk-8qC" userLabel="Table Reservation2">
+                                        <rect key="frame" x="136" y="335" width="171" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Xbox for 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="YfV-mH-IPT"/>
                                             <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="tDp-Cb-1rB"/>
                                         </connections>
                                     </button>
@@ -112,6 +125,10 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <connections>
+                        <outlet property="firstRoomView" destination="WSi-bn-27e" id="TEN-jj-Ky1"/>
+                        <outlet property="secondRoomView" destination="X5H-ka-dmI" id="J3P-z9-Gcp"/>
+                        <outlet property="tableReservation1" destination="hBV-hC-d4w" id="4Kj-WZ-MaI"/>
+                        <outlet property="tableReservation2" destination="ZGA-Tk-8qC" id="LSv-Mv-9gm"/>
                         <outlet property="collectionView" destination="EFJ-a3-VUH" id="BqG-C6-42v"/>
                         <outlet property="firstRoomView" destination="WSi-bn-27e" id="1by-QG-29s"/>
                         <outlet property="secondRoomView" destination="X5H-ka-dmI" id="UCn-yk-1Uq"/>

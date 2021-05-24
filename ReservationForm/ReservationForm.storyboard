@@ -89,11 +89,23 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="reserveButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="DBq-fY-wmS"/>
+                                    <action selector="reserveButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="7gd-fd-rea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMk-1R-UoO">
+                                <rect key="frame" x="16" y="524" width="343" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92371088270000001" green="0.076073817909999994" blue="0.31762310859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToMenuButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="wlE-7s-3eK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ss-VP-8yM">
-                                <rect key="frame" x="16" y="526" width="343" height="36"/>
+                                <rect key="frame" x="16" y="574" width="343" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92371088270000001" green="0.076073817909999994" blue="0.31762310859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -101,13 +113,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="backToRestaurantButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="7r3-9o-bie"/>
+                                    <action selector="backToRestaurantButton:" destination="OS6-ZL-7EZ" eventType="touchUpInside" id="oar-Zi-hZI"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JxL-7x-ykq"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
+                    <connections>
+                        <outlet property="userDateReservationLabel" destination="CEj-hb-bQx" id="Pod-yZ-bhC"/>
+                        <outlet property="userNameLabel" destination="o8x-U4-JJt" id="7Va-0Y-kUI"/>
+                        <outlet property="userPhoneLabel" destination="Eeb-G7-Udv" id="TfP-ga-pRt"/>
+                        <outlet property="userSurnameLabel" destination="wns-0L-lp2" id="sfR-AW-C6a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asS-xo-AzC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
