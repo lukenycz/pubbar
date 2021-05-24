@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,6 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hC-d4w" userLabel="Table Reservation1">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBV-hC-d4w">
                                         <rect key="frame" x="136" y="268" width="171" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92371088270000001" green="0.076073817909999994" blue="0.31762310859999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -52,8 +54,58 @@
                                         </state>
                                         <connections>
                                             <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="YfV-mH-IPT"/>
+                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="tDp-Cb-1rB"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGA-Tk-8qC">
+                                        <rect key="frame" x="136" y="335" width="171" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Xbox for 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tableTapped:" destination="wpA-Z9-ldI" eventType="touchUpInside" id="n9f-cs-NJ5"/>
+                                        </connections>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EFJ-a3-VUH">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="530"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LAz-hq-cFb">
+                                            <size key="itemSize" width="132" height="105"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="tVp-Nj-R7I" customClass="ReservationTableCollectionViewCell" customModule="PubBar" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="132" height="105"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7bg-Fu-1FG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="132" height="105"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suu-C7-S1t">
+                                                            <rect key="frame" x="40" y="33" width="72" height="39"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </collectionViewCellContentView>
+                                                <size key="customSize" width="132" height="105"/>
+                                                <connections>
+                                                    <outlet property="myLabel" destination="suu-C7-S1t" id="Vli-SO-3Z7"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="wpA-Z9-ldI" id="b93-cv-ZB4"/>
+                                            <outlet property="delegate" destination="wpA-Z9-ldI" id="jcR-Dt-HHI"/>
+                                        </connections>
+                                    </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
@@ -77,6 +129,10 @@
                         <outlet property="secondRoomView" destination="X5H-ka-dmI" id="J3P-z9-Gcp"/>
                         <outlet property="tableReservation1" destination="hBV-hC-d4w" id="4Kj-WZ-MaI"/>
                         <outlet property="tableReservation2" destination="ZGA-Tk-8qC" id="LSv-Mv-9gm"/>
+                        <outlet property="collectionView" destination="EFJ-a3-VUH" id="BqG-C6-42v"/>
+                        <outlet property="firstRoomView" destination="WSi-bn-27e" id="1by-QG-29s"/>
+                        <outlet property="secondRoomView" destination="X5H-ka-dmI" id="UCn-yk-1Uq"/>
+                        <outlet property="tableReservation" destination="hBV-hC-d4w" id="Aqn-wR-QcM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvg-ix-Wwg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
