@@ -44,7 +44,6 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
            // menu.menu![section].snacks.count
            // menu.menu![section].pizza.count
             
-            
         }
         return 0
     }
