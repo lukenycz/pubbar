@@ -13,10 +13,12 @@ struct Menu:Codable {
 
 struct MenuContains:Codable {
     let type:String?
-    let drinks:[Drinks]?
-    let softdrinks:[SoftDrinks]?
-    let snacks:[Snacks]?
-    let pizza:[Pizza]?
+    let items:[Items]
+}
+struct Items:Codable {
+    let name: String
+    let description: String
+    let price: Int
 }
 struct Drinks:Codable {
     let name: String

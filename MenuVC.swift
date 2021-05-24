@@ -38,18 +38,16 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return menu?.menu[section].type
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let menu = menu {
-            return menu.menu[section].drinks?.count ?? 0
-           // menu.menu![section].softdrinks.count
-           // menu.menu![section].snacks.count
-           // menu.menu![section].pizza.count
-            
+       if let drinks = menu {
+        return drinks.menu[section].items.count
         }
         return 0
     }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let name = menu?.menu[indexPath.section].drinks?[indexPath.item].name
-        let description = menu?.menu[indexPath.section].drinks?[indexPath.item].description
+        let name = menu?.menu[indexPath.section].items[indexPath.item].name
+        let description = menu?.menu[indexPath.section].items[indexPath.item].description
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = name
         cell.detailTextLabel?.text = description

@@ -2,7 +2,7 @@
    "menu": [
        {
         "type": "Drinks",
-        "drinks": [
+        "items": [
                 {
                     "name": "Heineken",
                     "description": " ",
@@ -32,7 +32,7 @@
         },
        {
             "type": "SoftDrinks",
-            "softdrinks": [
+            "items": [
                 {
                     "name": "Coke",
                     "description": " ",
@@ -62,7 +62,7 @@
         },
        {
             "type": "Snacks",
-            "snacks": [
+            "items": [
                 {
                     "name": "Fries",
                     "description": "with ketchup",
@@ -92,7 +92,7 @@
         },
        {
             "type": "Pizza",
-            "pizza": [
+            "items": [
                 {
                     "name": "Margherita",
                     "description": "Tomato sauce, mozzarella, and oregano",
