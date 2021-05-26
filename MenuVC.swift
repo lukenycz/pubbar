@@ -15,6 +15,7 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let table = UITableView(frame: .zero,
                                 style: .grouped)
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
         return table
     }()
 
@@ -38,8 +39,8 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return menu?.menu[section].type
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       if let drinks = menu {
-        return drinks.menu[section].items.count
+       if let menu = menu {
+        return menu.menu[section].items.count
         }
         return 0
     }
@@ -48,7 +49,9 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let name = menu?.menu[indexPath.section].items[indexPath.item].name
         let description = menu?.menu[indexPath.section].items[indexPath.item].description
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
+        _ = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = name
         cell.detailTextLabel?.text = description
         return cell
