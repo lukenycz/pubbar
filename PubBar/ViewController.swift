@@ -6,26 +6,72 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var emailText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    
+    @IBAction func loginClicked(_ sender: Any) {
+        
+        if emailText.text != "" && passwordText.text != "" {
+            Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { (authData, error) in
+                if error != nil {
+                    self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
+                } else {
+                    self.goToRestaurantView()
+                }
+            }
+        } else {
+            makeAlert(titleInput: "Error", messageInput: "Username/Password")
+
+        }
+    }
+    
+    
+    @IBAction func signInClicked(_ sender: Any) {
+        
+        if emailText.text != "" && passwordText.text != " " {
+            Auth.auth().createUser(withEmail: emailText.text!, password: passwordText.text!) { (authData, error) in
+                if error != nil {
+                    self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
+                    
+                } else {
+                    self.goToRestaurantView()
+                }
+            }
+        } else {
+            makeAlert(titleInput: "Error", messageInput: "Username/Password")
+        }
+    }
+   
     @IBAction func guestButton(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "RestaurantCollectionVC", bundle: nil)
-        let restaurantVC = storyboard.instantiateViewController(withIdentifier: "RestaurantCollectionVC") as! RestaurantCollectionVC
-        restaurantVC.modalPresentationStyle = .overFullScreen
-        self.present(restaurantVC, animated: true, completion: nil)
-        /*
-       let vcRestaurant = storyboard?.instantiateViewController(withIdentifier: "RestaurantView") as! RestaurantView
-        navigationController?.present(vcRestaurant, animated: true, completion: nil)
-         */
+       goToRestaurantView()
+  
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        
+        
+    }
+    
+    func makeAlert(titleInput:String, messageInput:String) {
+        let alert = UIAlertController(title: titleInput, message: messageInput, preferredStyle: UIAlertController.Style.alert)
+        let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+        alert.addAction(okButton)
+        self.present(alert, animated: true, completion: nil)
     }
 
+    func goToRestaurantView() {
+        let storyboard = UIStoryboard(name: "RestaurantCollectionVC", bundle: nil)
+        let restaurantVC = storyboard.instantiateViewController(withIdentifier: "RestaurantCollectionVC") as! RestaurantCollectionVC
+        restaurantVC.modalPresentationStyle = .overFullScreen
+        self.present(restaurantVC, animated: true, completion: nil)
+    }
 
 }
 
